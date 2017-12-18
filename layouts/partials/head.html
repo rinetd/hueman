@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <base href="{{ .Site.BaseURL }}/">
+  <script>
+    document._writeOriginal = document.write;
+    document.write = function(str) {
+        if (str.indexOf('livereload.js') > -1) {
+            document._writeOriginal(str);
+        } else {
+            document._writeOriginal('<!-- Be Hijack!! -->');
+        }
+    }
+  </script>
+{{ partial "head.meta.html" . }}
+<script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+<link rel="canonical" href="{{ .RelPermalink}}">
+<link rel='shortlink' href="{{ .Permalink}}"/>
+<link rel="shortcut icon" href="/public/favicon.ico"/>
+{{ partial "head.includes.html" . }}
+</head>
