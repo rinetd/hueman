@@ -1,6 +1,6 @@
 # hugo-theme-hueman
 
-Demo: [http://blog.pytoll.com/](http://blog.pytool.com/)
+Demo: [http://blog.pytool.com/](http://blog.pytool.com/)
 
 ## Step1 Install Hugo
 
